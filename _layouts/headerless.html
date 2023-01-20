@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-social@2.1.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/minified/all.min.css" />
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bulma-extensions@4.0.1/bulma-pageloader/dist/css/bulma-pageloader.min.css" />
+    <link rel="icon" href="favicon.ico" />
+    <title>{{ site.title }} - {{ page.title }}</title>
+    <meta name="description" content="{{ page.description | default: site.description }}">
+    <meta name="author" content="{{ page.author | default: site.author }}">
+    {% include siteVars.html %}
+</head>
+
+<body>
+    <div class="container">
+        {{content}}
+    </div>
+    {% include footer.html %}
+    <div class="pageloader"><span class="title">{{ page.loading | 'Loading'}}</span></div>
+    <script type="text/javascript" src="assets/js/minified/all.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/bulma-toast@2.3.1/dist/bulma-toast.min.js"></script>
+</body>
+
+</html>

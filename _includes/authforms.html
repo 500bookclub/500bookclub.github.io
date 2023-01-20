@@ -1,0 +1,132 @@
+<div id="loginformModal" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title has-text-centered">Log In</p>
+            <button class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+            <div class="buttons is-centered px-3">
+                <a class=" button is-medium is-github" id="loginwithGithub">
+                    <span class="icon">
+                        <i class="fab fa-github fa-lg"></i>
+                    </span>
+                </a>
+                <a class=" button is-medium is-facebook" id="loginWithFb">
+                    <span class="icon">
+                        <i class="fab fa-facebook fa-lg"></i>
+                    </span>
+                </a>
+                <a class=" button is-medium is-twitter" id="loginWithTwitter">
+                    <span class="icon">
+                        <i class="fab fa-twitter fa-lg"></i>
+                    </span>
+                </a>
+                <a class=" button is-medium is-google">
+                    <span class="icon">
+                        <i class="fab fa-google fa-lg"></i>
+                    </span>
+                </a>
+                <a class=" button is-medium is-linkedin" id="loginWithLinkedIn">
+                    <span class="icon">
+                        <i class="fab fa-linkedin fa-lg"></i>
+                    </span>
+                </a>
+            </div>
+            <form id="loginForm">
+                <div class="field">
+                    <label class="label">Email</label>
+                    <div class="control">
+                        <input class="input" name="Email" type="email" placeholder="Email" required>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Password</label>
+                    <div class="control">
+                        <input class="input" name="Password" type="password" placeholder="Password" required>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="control">
+                        <label class="checkbox">
+                            <input type="checkbox"> Remember me
+                        </label>
+                    </div>
+                </div>
+                <div class="field is-grouped">
+                    <div class="control">
+                        <button id="loginSubmitBtn" class="button is-link">Submit</button>
+                    </div>
+                    <div class="control">
+                        <a href="{{ window.site.baseurl}}/forgotPassword" class="button is-text">Forgot password?</a>
+                    </div>
+                </div>
+            </form>
+            <p>Don't have an account? <a class="js-modal-trigger" href="#"
+                    data-target="loginformRegister">Register</a></p>
+        </section>
+    </div>
+</div>
+<div id="loginformRegister" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title has-text-centered">Create New Account</p>
+            <button class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+            <form id="registrationForm">
+                <div class="field">
+                    <label class="label">Email</label>
+                    <div class="control">
+                        <input id="regEmail" class="input" name="email" type="email" placeholder="Email" required>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">First Name</label>
+                    <div class="control">
+                        <input class="input" name="firstName" type="text" placeholder="First Name" required>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Last Name</label>
+                    <div class="control">
+                        <input class="input" name="lastName" type="text" placeholder="Last Name" required>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Gender</label>
+                    <div class="control">
+                        <div class="select">
+                            <select required name="gender" value="">
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Phone Number</label>
+                    <div class="control">
+                        <input class="input" name="phoneNumber" type="tel" placeholder="Phone Number" required>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Date of Birth</label>
+                    <div class="control">
+                        <input class="input" id="dob_reg" name="dob" type="date" placeholder="Date of Birth"
+                            required>
+                    </div>
+                </div>
+                <div class="field is-grouped">
+                    <div class="control">
+                        <button id="registerSubmit" class="button is-link">Submit</button>
+                    </div>
+                </div>
+            </form>
+
+            <p>Already have an account? <a class="js-modal-trigger" href="#" data-target="loginformModal">Sign
+                    In</a></p>
+        </section>
+    </div>
+</div>

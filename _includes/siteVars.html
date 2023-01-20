@@ -1,0 +1,11 @@
+<script>
+  window.site = {
+    title: '{{ site.title }}',
+    baseurl: '{{ site.baseurl }}',
+    env: '{{ site.env }}',
+    API: JSON.stringify(decodeURIComponent("{{ site.API | jsonify | uri_escape  }}")),
+    CLIENT_IDS: JSON.stringify(decodeURIComponent("{{ site.CLIENT_IDS | jsonify | uri_escape  }}"))
+  };
+  window.site.API = JSON.parse(JSON.parse(window.site.API))[window.site.env]
+  window.site.CLIENT_IDS = JSON.parse(JSON.parse(window.site.CLIENT_IDS))[window.site.env]
+</script>

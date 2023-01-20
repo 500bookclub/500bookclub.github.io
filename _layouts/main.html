@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-social@2.1.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/minified/all.min.css" />
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bulma-extensions@4.0.1/bulma-pageloader/dist/css/bulma-pageloader.min.css" />
+    <link rel="icon" href="favicon.ico" />
+    <title>{{ site.title }} - {{ page.title }}</title>
+    <meta name="description" content="{{ page.description | default: site.description }}">
+    <meta name="author" content="{{ page.author | default: site.author }}">
+    {% include siteVars.html %}
+</head>
+
+<body>
+    <nav class="navbar has-shadow px-6" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="https://bulma.io">
+                <img src="{{ site.baseurl }}/images/logo.png" alt="500BookClub" />
+                <h1> 500BookClub</h1>
+            </a>
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="nav1">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div id="nav1" class="navbar-menu">
+            <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+                <p class="navbar-item">Read affordably; Support charity</p>
+            </div>
+            <div class="navbar-end">
+                <a class="navbar-item is-link js-modal-trigger" href="#" data-target="loginformModal">Sign
+                    In</a>
+                <p class="navbar-item is-link">|</p>
+                <a class="navbar-item  js-modal-trigger" href="#" data-target="loginformRegister"> Registration</a>
+                <div class="navbar-item">
+
+                    <div class="buttons">
+                        <a class="button js-modal-trigger" data-target="loginformModal">
+                            <strong>Library</strong>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        {{content}}
+    </div>
+    {% include footer.html %}
+    <div class="pageloader"><span class="title">{{ page.loading | 'Loading'}}</span></div>
+    <script type="text/javascript" src="assets/js/minified/all.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/bulma-toast@2.3.1/dist/bulma-toast.min.js"></script>
+</body>
+
+</html>

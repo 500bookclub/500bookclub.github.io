@@ -1,0 +1,12 @@
+.navbar {
+    background-color: #00b53f;
+}
+
+.navbar-item,
+.navbar-link {
+    color: white;
+}
+
+.invalid {
+    border: 1px solid red;
+}
