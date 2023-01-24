@@ -11,7 +11,8 @@ jobs:
 
     steps:
     - name: Update _config.yaml
-      run: sed -i -e 's/env: dev/env: prod/' _config.yml
+      run: |
+        sed -i -e 's/env: dev/env: prod/' _config.yml
     - name: Build and Deploy
       run: |
         jekyll build --branch gh-pages
