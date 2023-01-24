@@ -9,3 +9,13 @@
   window.site.API = JSON.parse(JSON.parse(window.site.API))[window.site.env]
   window.site.CLIENT_IDS = JSON.parse(JSON.parse(window.site.CLIENT_IDS))[window.site.env]
 </script>
+
+{% if jekyll.environment == "production" %}
+<script>
+  window.site.env = "prod"
+</script>
+{% endif %}
+<script>
+  window.site.API = JSON.parse(JSON.parse(window.site.API))[window.site.env]
+  window.site.CLIENT_IDS = JSON.parse(JSON.parse(window.site.CLIENT_IDS))[window.site.env]
+</script>
