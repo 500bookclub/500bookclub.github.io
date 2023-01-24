@@ -47,6 +47,11 @@ CLIENT_IDS:
     LINKEDIN: "77q8c1c6nb31to"
     FACEBOOK: "8623091061099143"
     TWITTER: "VDZnUWhmem1Zb1NMdDcteHc0Y2U6MTpjaQ"
+  prod:
+    GITHUB: "0c78c2c3c27ac715f4d8"
+    LINKEDIN: "77q8c1c6nb31to"
+    FACEBOOK: "8623091061099143"
+    TWITTER: "VDZnUWhmem1Zb1NMdDcteHc0Y2U6MTpjaQ"
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
