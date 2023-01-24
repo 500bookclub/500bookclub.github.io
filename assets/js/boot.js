@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     window.csystem.showError("Github code not found.")
                     window.location.href = window.location.href.split("github_login")[0]
                 }
-                fetch(`${window.site.API}/api/auth/social/github?Code=` + code, {
+                fetch(`${window.site.API}/api/auth/social/github?clientID=${window.site.CLIENT_IDS["GITHUB"]}&Code=` + code, {
                     method: "GET"
                 })
                     .then(async (response) => {
@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         window.csystem.showError("LinkedIn code not found.")
                         window.location.href = window.location.href.split("github_login")[0]
                     }
-                    fetch(`${window.site.API}/api/auth/social/linkedin?Code=${code}&redirect_uri=${encodeURIComponent(window.csystem.baseUrl+"/linkedin_login")}`, {
+                    fetch(`${window.site.API}/api/auth/social/linkedin?clientID=${window.site.CLIENT_IDS["LINKEDIN"]}&Code=${code}&redirect_uri=${encodeURIComponent(window.csystem.baseUrl+"/linkedin_login")}`, {
                         method: "GET"
                     })
                         .then(async (response) => {
