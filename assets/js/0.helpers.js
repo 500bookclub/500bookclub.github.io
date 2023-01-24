@@ -95,11 +95,6 @@ class csystem {
     }
     loginWithLinkedIn = () => {
         window.location.href = `https://www.linkedin.com/oauth/v2/authorization?client_id=${this.IN_CLIENT_ID}&response_type=code&redirect_uri=${encodeURIComponent(this.baseUrl + "/linkedin_login")}&scope=r_liteprofile%20r_emailaddress`;
-        // IN.User.authorize(function(){
-        //     IN.API.Profile("me").fields(["firstName", "lastName"]).result(function(result) {
-        //         console.log(result);
-        //     });
-        // });
     }
 
     goHome(){
